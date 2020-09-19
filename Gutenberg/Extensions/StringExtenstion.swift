@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+extension String {
+    // Empty String
+    static var empty: String {
+        return ""
+    }
+}

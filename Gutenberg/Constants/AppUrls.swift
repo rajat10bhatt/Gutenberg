@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct AppUrls {
+    static let baseUrl = "http://skunkworks.ignitesol.com:8000/"
+    static let books = AppUrls.baseUrl + "books/"
+}

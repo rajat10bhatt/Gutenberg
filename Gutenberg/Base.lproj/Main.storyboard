@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzO-wB-ORL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CategoryViewController" customModule="Gutenberg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-N1-DYW">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" name="LightGrey"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="FAc-67-cYX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pattern" translatesAutoresizingMaskIntoConstraints="NO" id="mwa-Kn-wQZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Gutenberg Project" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMq-MW-w5c">
+                                            <rect key="frame" x="15" y="50" width="345" height="122"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="50"/>
+                                            <color key="textColor" name="Purple"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="A social cataloging website that allows you to freely search its database of books, annotations, and review" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G53-Pp-QIk">
+                                            <rect key="frame" x="15" y="192" width="345" height="59"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="LightGrey"/>
+                                    <constraints>
+                                        <constraint firstItem="G53-Pp-QIk" firstAttribute="leading" secondItem="FAc-67-cYX" secondAttribute="leading" constant="15" id="3zt-rN-FVJ"/>
+                                        <constraint firstItem="mwa-Kn-wQZ" firstAttribute="top" secondItem="FAc-67-cYX" secondAttribute="top" id="5hY-Cy-Bza"/>
+                                        <constraint firstItem="G53-Pp-QIk" firstAttribute="top" secondItem="ZMq-MW-w5c" secondAttribute="bottom" constant="20" id="HHU-HQ-Dn7"/>
+                                        <constraint firstAttribute="trailing" secondItem="G53-Pp-QIk" secondAttribute="trailing" constant="15" id="IbZ-jk-jCy"/>
+                                        <constraint firstAttribute="bottom" secondItem="mwa-Kn-wQZ" secondAttribute="bottom" id="Q8w-xK-sdj"/>
+                                        <constraint firstItem="ZMq-MW-w5c" firstAttribute="top" secondItem="FAc-67-cYX" secondAttribute="top" constant="50" id="Y72-Az-qO9"/>
+                                        <constraint firstItem="ZMq-MW-w5c" firstAttribute="leading" secondItem="FAc-67-cYX" secondAttribute="leading" constant="15" id="ZgD-N7-RWQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="G53-Pp-QIk" secondAttribute="bottom" constant="19" id="cRU-oS-Tlo"/>
+                                        <constraint firstAttribute="trailing" secondItem="mwa-Kn-wQZ" secondAttribute="trailing" id="kMF-Ng-k5z"/>
+                                        <constraint firstItem="mwa-Kn-wQZ" firstAttribute="leading" secondItem="FAc-67-cYX" secondAttribute="leading" id="ucH-Dz-jDJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZMq-MW-w5c" secondAttribute="trailing" constant="15" id="wJu-9i-4H8"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3Fg-VU-Cpv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cTv-ty-PE1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cwP-N1-DYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6HY-tF-1fu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cwP-N1-DYW" secondAttribute="bottom" id="Fcu-53-Od2"/>
+                            <constraint firstItem="cwP-N1-DYW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a3s-LH-XA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cwP-N1-DYW" secondAttribute="trailing" id="akg-97-pAS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xW9-tn-UZq"/>
+                    <connections>
+                        <outlet property="categoryTableVIew" destination="cwP-N1-DYW" id="rkT-2M-Z6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="135.38230884557723"/>
+        </scene>
+        <!--Category Books View Controller-->
+        <scene sceneID="Cw4-tx-KZf">
+            <objects>
+                <viewController storyboardIdentifier="CategoryBooksViewController" id="GdF-xn-DLd" customClass="CategoryBooksViewController" customModule="Gutenberg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GEh-af-zss">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="MPs-0x-ruY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ere-Gb-net">
+                                <rect key="frame" x="5" y="56" width="365" height="611"/>
+                                <color key="backgroundColor" name="LightGrey"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="3" minimumInteritemSpacing="3" id="9nN-ib-u9S">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GdF-xn-DLd" id="GFl-Nk-OHM"/>
+                                    <outlet property="delegate" destination="GdF-xn-DLd" id="w64-JY-gbc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MPs-0x-ruY" firstAttribute="leading" secondItem="54u-3L-xKg" secondAttribute="leading" id="1WN-m6-3Y6"/>
+                            <constraint firstItem="MPs-0x-ruY" firstAttribute="trailing" secondItem="54u-3L-xKg" secondAttribute="trailing" id="DKK-Bb-guT"/>
+                            <constraint firstItem="Ere-Gb-net" firstAttribute="trailing" secondItem="54u-3L-xKg" secondAttribute="trailing" constant="-5" id="QPK-NM-Yfd"/>
+                            <constraint firstItem="MPs-0x-ruY" firstAttribute="top" secondItem="54u-3L-xKg" secondAttribute="top" id="Ssi-HA-cb5"/>
+                            <constraint firstItem="Ere-Gb-net" firstAttribute="top" secondItem="MPs-0x-ruY" secondAttribute="bottom" id="Vde-RA-iWe"/>
+                            <constraint firstItem="Ere-Gb-net" firstAttribute="bottom" secondItem="54u-3L-xKg" secondAttribute="bottom" id="bUR-lK-kI5"/>
+                            <constraint firstItem="Ere-Gb-net" firstAttribute="leading" secondItem="54u-3L-xKg" secondAttribute="leading" constant="5" id="qEl-h2-o4g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="54u-3L-xKg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kxw-Qk-ldX"/>
+                    <connections>
+                        <outlet property="booksCollectionView" destination="Ere-Gb-net" id="2OC-AI-BEM"/>
+                        <outlet property="searchBar" destination="MPs-0x-ruY" id="swt-Fp-XpR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2s-wd-p95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525.5999999999999" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MFD-td-yx4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yzO-wB-ORL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MPM-pA-Xf1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zjU-Eh-eOw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7x-OY-Bhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pattern" width="960" height="158"/>
+        <namedColor name="LightGrey">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.36862745098039218" green="0.33725490196078434" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

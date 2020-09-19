@@ -9,16 +9,14 @@
 import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: Outlet
+    @IBOutlet weak var categoryImageView: UIImageView!
+    @IBOutlet weak var categoryTitle: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
+    func setup(category: BookCategories) {
+        self.containerView.addShadow(radius: 4)
+        self.categoryTitle.text = category.title
+        self.categoryImageView.image = category.image
+    }
 }
