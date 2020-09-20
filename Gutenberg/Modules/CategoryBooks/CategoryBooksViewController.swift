@@ -63,7 +63,7 @@ class CategoryBooksViewController: BaseViewController {
     
     // MARK: Observers
     // Books success
-    func observeBooksSuccess() {
+    private func observeBooksSuccess() {
         viewModel.booksCompletion = { [weak self] in
             DispatchQueue.main.async { [weak self] in
                 self?.booksCollectionView.reloadData()
@@ -72,7 +72,7 @@ class CategoryBooksViewController: BaseViewController {
     }
     
     // Next page success
-    func observeNextPageSuccess() {
+    private func observeNextPageSuccess() {
         viewModel.updateAfterNextPage = { [weak self] indexPaths in
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }

@@ -52,6 +52,7 @@ class CategoryBooksViewModel: CategoryBooksViewModelProtocol {
         self.service = CategoryBooksService()
     }
     
+    // Get selected category books
     func getCategoryBooks() {
         let queryItems = [URLQueryItem(name: QueryParameters.page.key, value: "1"), URLQueryItem(name: QueryParameters.topic.key, value: self.category.title.lowercased()), URLQueryItem(name: QueryParameters.mimeType.key, value: Format.CodingKeys.imagejpeg.rawValue)]
         if var urlComps = URLComponents(string: AppUrls.books) {
